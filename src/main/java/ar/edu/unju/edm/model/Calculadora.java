@@ -1,5 +1,8 @@
 package ar.edu.unju.edm.model;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Calculadora {
   private int numero1;
   private int numero2;
@@ -36,6 +39,18 @@ public class Calculadora {
     }else{
       resultado=numero1/numero2;
     }
+    return resultado;
+  }
+  public int PotenciaNumeros(){
+    int resultado=1;
+    for(int i=1;i<=numero2;i++){
+      resultado = resultado*numero1;
+    }
+    return resultado;
+  }
+  public double RaizNumero(){
+    double resultado;
+    resultado=Math.sqrt(numero1);
     return resultado;
   }
 }
